@@ -34,7 +34,3 @@ async def upload_files(
         "department": department,
         "files": [{"filename": f["filename"], "size": f["size"]} for f in file_data]
     }
-
-# Run the application (only needed for local development)
-if __name__ == "__main__":
-    
