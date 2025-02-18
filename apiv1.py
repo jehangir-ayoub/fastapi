@@ -3,7 +3,13 @@ from typing import List
 
 app = FastAPI()
 
-@app.post("/v1//upload/")
+# Root endpoint
+@app.get("/")
+def home():
+    return {"message": "Welcome to FastAPI! 🚀"}
+
+# File upload endpoint
+@app.post("/v1/upload/")
 async def upload_files(
     user_id: str = Form(...),
     department: str = Form(...),
